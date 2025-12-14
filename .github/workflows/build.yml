@@ -46,15 +46,15 @@ jobs:
       - name: Build Windows Exe
         if: matrix.os == 'windows-latest'
         run: |
-          jpackage --input target ^
-            --name "SmartEmailCleanup" ^
-            --main-jar smart-email-cleanup-1.0.0-jar-with-dependencies.jar ^
-            --main-class com.emailcleanup.EmailCleanupApp ^
-            --type exe ^
-            --app-version 1.0.0 ^
-            --win-dir-chooser ^
-            --win-menu ^
-            --java-options "--enable-native-access=ALL-UNNAMED" ^
+          jpackage --input target `
+            --name "SmartEmailCleanup" `
+            --main-jar smart-email-cleanup-1.0.0-jar-with-dependencies.jar `
+            --main-class com.emailcleanup.EmailCleanupApp `
+            --type exe `
+            --app-version 1.0.0 `
+            --win-dir-chooser `
+            --win-menu `
+            --java-options "--enable-native-access=ALL-UNNAMED" `
             --dest dist
 
       # --- LINUX BUILD STEP ---
