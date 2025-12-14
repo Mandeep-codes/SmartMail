@@ -1,0 +1,238 @@
+/* Dark Theme for Smart Email Cleanup Assistant */
+
+.root {
+    -fx-base: #1E1E1E;
+    -fx-background: #121212;
+    -fx-control-inner-background: #2D2D2D;
+    -fx-accent: #64B5F6;
+    -fx-focus-color: #64B5F6;
+    -fx-faint-focus-color: #64B5F644;
+}
+
+.main-content {
+    -fx-background-color: #121212;
+}
+
+.dashboard-title {
+    -fx-text-fill: #E0E0E0;
+    -fx-effect: dropshadow(gaussian, rgba(100,181,246,0.3), 8, 0, 0, 2);
+}
+
+.stats-box {
+    -fx-background-color: linear-gradient(to bottom, #2D2D2D, #252525);
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 2);
+}
+
+.stat-card {
+    -fx-background-color: #2D2D2D;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 8, 0, 0, 3);
+}
+
+.stat-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(100,181,246,0.5), 12, 0, 0, 4);
+    -fx-cursor: hand;
+}
+
+.stat-title {
+    -fx-text-fill: #B0B0B0;
+}
+
+.stat-value {
+    -fx-effect: dropshadow(gaussian, rgba(100,181,246,0.3), 3, 0, 0, 1);
+}
+
+.search-field {
+    -fx-background-color: #2D2D2D;
+    -fx-background-radius: 20;
+    -fx-padding: 8 15;
+    -fx-border-color: #424242;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-text-fill: #E0E0E0;
+}
+
+.search-field:focused {
+    -fx-border-color: #64B5F6;
+    -fx-effect: dropshadow(gaussian, rgba(100,181,246,0.5), 5, 0, 0, 0);
+}
+
+.table-view {
+    -fx-background-color: #1E1E1E;
+    -fx-border-color: #424242;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #2D2D2D, #252525);
+    -fx-font-weight: bold;
+    -fx-text-fill: #E0E0E0;
+}
+
+.table-row-cell {
+    -fx-background-color: #1E1E1E;
+    -fx-border-color: transparent transparent #2D2D2D transparent;
+    -fx-text-fill: #E0E0E0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #252525;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: #FFFFFF;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #2D2D2D;
+}
+
+.table-cell {
+    -fx-text-fill: #E0E0E0;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #1976D2, #1565C0);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2196F3, #1976D2);
+    -fx-effect: dropshadow(gaussian, rgba(100,181,246,0.6), 8, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #1565C0, #0D47A1);
+}
+
+.danger-button {
+    -fx-background-color: linear-gradient(to bottom, #D32F2F, #C62828);
+}
+
+.danger-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #F44336, #D32F2F);
+}
+
+.status-bar {
+    -fx-background-color: linear-gradient(to bottom, #2D2D2D, #252525);
+    -fx-border-color: #424242 transparent transparent transparent;
+}
+
+.status-label {
+    -fx-text-fill: #E0E0E0;
+    -fx-font-weight: bold;
+}
+
+.version-label {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-size: 11px;
+}
+
+.email-preview {
+    -fx-background-color: #1E1E1E;
+    -fx-border-color: #424242;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #E0E0E0;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #252525;
+    -fx-text-fill: #B0B0B0;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: #64B5F6;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: #B0B0B0;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #64B5F6;
+}
+
+.chart {
+    -fx-background-color: #1E1E1E;
+    -fx-border-color: #424242;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 15;
+}
+
+.chart-title {
+    -fx-text-fill: #E0E0E0;
+}
+
+.chart-legend {
+    -fx-background-color: #252525;
+    -fx-border-color: #424242;
+}
+
+.chart-legend-item-text {
+    -fx-fill: #E0E0E0;
+}
+
+.axis-label {
+    -fx-text-fill: #B0B0B0;
+}
+
+.axis-tick-mark {
+    -fx-stroke: #424242;
+}
+
+.menu-bar {
+    -fx-background-color: linear-gradient(to bottom, #2D2D2D, #252525);
+}
+
+.menu-item {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: #E0E0E0;
+}
+
+.menu-item:hover {
+    -fx-background-color: #1565C0;
+}
+
+.menu .label {
+    -fx-text-fill: #E0E0E0;
+}
+
+.combo-box {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: #424242;
+    -fx-border-radius: 4;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2D2D2D;
+    -fx-text-fill: #E0E0E0;
+}
+
+.progress-bar {
+    -fx-accent: #64B5F6;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to bottom, #42A5F5, #64B5F6);
+    -fx-background-radius: 2;
+}
+
+.text-area {
+    -fx-text-fill: #E0E0E0;
+}
+
+.label {
+    -fx-text-fill: #E0E0E0;
+}
