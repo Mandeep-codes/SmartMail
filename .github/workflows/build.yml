@@ -49,7 +49,7 @@ jobs:
           jpackage --input target `
             --name "SmartEmailCleanup" `
             --main-jar smart-email-cleanup-1.0.0-jar-with-dependencies.jar `
-            --main-class com.emailcleanup.EmailCleanupApp `
+            --main-class com.emailcleanup.AppLauncher `
             --type exe `
             --app-version 1.0.0 `
             --win-dir-chooser `
@@ -64,7 +64,7 @@ jobs:
           jpackage --input target \
             --name "smart-email-cleanup" \
             --main-jar smart-email-cleanup-1.0.0-jar-with-dependencies.jar \
-            --main-class com.emailcleanup.EmailCleanupApp \
+            --main-class com.emailcleanup.AppLauncher \
             --type deb \
             --app-version 1.0.0 \
             --java-options "--enable-native-access=ALL-UNNAMED" \
@@ -77,7 +77,7 @@ jobs:
           jpackage --input target \
             --name "SmartEmailCleanup" \
             --main-jar smart-email-cleanup-1.0.0-jar-with-dependencies.jar \
-            --main-class com.emailcleanup.EmailCleanupApp \
+            --main-class com.emailcleanup.AppLauncher \
             --type dmg \
             --app-version 1.0.0 \
             --java-options "--enable-native-access=ALL-UNNAMED" \
