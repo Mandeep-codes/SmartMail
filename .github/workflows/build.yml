@@ -14,17 +14,17 @@ jobs:
           - os: ubuntu-latest
             type: deb
             suffix: linux
-            javafx_platform: linux
+            
           # --- Windows Build ---
           - os: windows-latest
             type: exe
             suffix: win
-            javafx_platform: win
-          # --- Mac Build (Intel/Universal) ---
-          - os: macos-latest
+            
+          # --- Mac Build (Apple Silicon / M1 / M2) ---
+          # ✅ FIXED: Changed to 'macos-14' to match the step condition below
+          - os: macos-14
             type: dmg
             suffix: mac
-            javafx_platform: mac
 
     runs-on: ${{ matrix.os }}
 
@@ -36,11 +36,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17' # ✅ Uses Java 17 strictly
+          java-version: '17'
 
       - name: Build with Maven
-        # ✅ Added quotes around the property to fix the Windows/PowerShell error
-        run: mvn clean package "-Djavafx.platform=${{ matrix.javafx_platform }}"
+        # ✅ FIXED: Removed the dynamic variable since pom.xml is now Universal
+        run: mvn clean package
 
       # --- WINDOWS BUILD STEP ---
       - name: Build Windows Exe
@@ -72,7 +72,7 @@ jobs:
 
       # --- MAC BUILD STEP ---
       - name: Build Mac DMG
-        if: matrix.os == 'macos-latest'
+        if: matrix.os == 'macos-14'
         run: |
           jpackage --input target \
             --name "SmartEmailCleanup" \
