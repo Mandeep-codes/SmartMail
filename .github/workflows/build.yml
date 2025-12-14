@@ -39,8 +39,8 @@ jobs:
           java-version: '17' # ✅ Uses Java 17 strictly
 
       - name: Build with Maven
-        # ✅ Forces Maven to use the correct libraries for the current OS (Win/Mac/Linux)
-        run: mvn clean package -Djavafx.platform=${{ matrix.javafx_platform }}
+        # ✅ Added quotes around the property to fix the Windows/PowerShell error
+        run: mvn clean package "-Djavafx.platform=${{ matrix.javafx_platform }}"
 
       # --- WINDOWS BUILD STEP ---
       - name: Build Windows Exe
