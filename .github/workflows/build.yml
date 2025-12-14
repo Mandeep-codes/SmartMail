@@ -14,17 +14,19 @@ jobs:
           - os: ubuntu-latest
             type: deb
             suffix: linux
+            javafx_platform: linux
             
           # --- Windows Build ---
           - os: windows-latest
             type: exe
             suffix: win
+            javafx_platform: win
             
           # --- Mac Build (Apple Silicon / M1 / M2) ---
-          # ✅ FIXED: Changed to 'macos-14' to match the step condition below
-          - os: macos-14
+          - os: macos-14 # Uses M1 Runner
             type: dmg
             suffix: mac
+            javafx_platform: mac-aarch64 # ✅ Explicitly asking for ARM libs
 
     runs-on: ${{ matrix.os }}
 
@@ -39,8 +41,8 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        # ✅ FIXED: Removed the dynamic variable since pom.xml is now Universal
-        run: mvn clean package
+        # ✅ Forces Maven to use the correct libraries for each OS
+        run: mvn clean package "-Djavafx.platform=${{ matrix.javafx_platform }}"
 
       # --- WINDOWS BUILD STEP ---
       - name: Build Windows Exe
