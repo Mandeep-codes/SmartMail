@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DatabaseService {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseService.class);
-    private static final String DB_URL = "jdbc:h2:./data/emailcleanup;AUTO_SERVER=TRUE";
+    private static final String DB_URL = "jdbc:h2:~/.smart-email-cleanup/emaildb";
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
     
